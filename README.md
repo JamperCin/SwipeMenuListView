@@ -121,5 +121,6 @@ Use this light weight android library to create a customised listView to show me
             listView.setCloseInterpolator(new BounceInterpolator());
 ```
 
-**Credits to this ** ![alt text](https://github.com/baoyongzhang/SwipeMenuListView) 
+**Credits to this ** 
+https://github.com/baoyongzhang/SwipeMenuListView
 

@@ -3,6 +3,7 @@ package com.jamper.swipemenulistview.swipe;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.Log;
@@ -96,6 +97,23 @@ public class SwipeMenuView extends LinearLayout implements OnClickListener {
                 tv.setTextSize(item.getTitleSize());
                 tv.setTextColor(getContext().getResources().getColor(item.getTitleColor()));
             }
+
+            try {
+                if (!TextUtils.isEmpty(item.getTitle())) {
+                    Typeface font = Typeface.createFromAsset(getContext().getAssets(), item.getFontName());
+                    tv.setTypeface(font);
+                }
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
+
+            try{
+                imageView.getLayoutParams().height = item.getImageHeight();
+                imageView.getLayoutParams().width = item.getImageWidth();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,6 +3,7 @@ package com.jamper.swipemenulistview.swipe;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.util.TypedValue;
 
 /**
  * 
@@ -23,6 +24,9 @@ public class SwipeMenuItem {
 	private int width;
 	private int layoutBackgroundColor = 0;
 	private Margins margins;
+	private String fontName;
+	private int imageWidth = 15;
+	private int imageHeight = 15;
 
 	public SwipeMenuItem(Context context) {
 		mContext = context;
@@ -126,5 +130,30 @@ public class SwipeMenuItem {
 
 	public void setMargins(Margins margins) {
 		this.margins = margins;
+	}
+
+	public void setFontName(String fontName) {
+		this.fontName = fontName;
+	}
+
+	public String getFontName() {
+		return this.fontName;
+	}
+
+	public void setImageSize(int imageWidth, int imageHeight){
+		this.imageWidth = dp2px(imageWidth);
+		this.imageHeight = dp2px(imageHeight);
+	}
+
+	private int dp2px(int dp) {
+		return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, mContext.getResources().getDisplayMetrics());
+	}
+
+	public int getImageWidth() {
+		return imageWidth;
+	}
+
+	public int getImageHeight() {
+		return imageHeight;
 	}
 }

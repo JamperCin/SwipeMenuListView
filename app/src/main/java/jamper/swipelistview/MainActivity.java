@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.animation.BounceInterpolator;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jamper.swipemenulistview.swipe.Margins;
 import com.jamper.swipemenulistview.swipe.SwipeMenu;
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     approve.setTitleSize(14);
                     approve.setIconTintColor(R.color.white);
                     approve.setLayoutBackgroundColor(R.color.ash);
+                    approve.setFontName("GothamRnd-Bold.otf");
+                    approve.setImageSize(15,15);
                     approve.setMargins(new Margins(5,5,5,5));
                     menu.addMenuItem(approve);
 
@@ -101,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                     cancel.setIconTintColor(R.color.white);
                     cancel.setLayoutBackgroundColor(R.color.ash);
                     cancel.setMargins(new Margins(5,5,5,5));
+                    approve.setFontName("GothamRnd-Bold.otf");
+                    approve.setImageSize(15,15);
                     menu.addMenuItem(cancel);
 
                 }
@@ -113,11 +118,11 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (index) {
                         case 0:
-
-
+                            Toast.makeText(MainActivity.this, "index 0", Toast.LENGTH_SHORT).show();
                             break;
 
                         case 1:
+                            Toast.makeText(MainActivity.this, "index 1", Toast.LENGTH_SHORT).show();
 
                             break;
 

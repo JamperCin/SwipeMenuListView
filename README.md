@@ -17,7 +17,7 @@ Use this light weight android library to create a customised listView to show me
   **Step 2: Add the dependency to your dependencies in the build.gradle (Module:App level)**
 
 	dependencies {
-	        implementation 'com.github.JamperCin:SwipeMenuListView:1.0.2'
+	        implementation 'com.github.JamperCin:SwipeMenuListView:1.0.3'
 	}
   
  
@@ -62,30 +62,33 @@ Use this light weight android library to create a customised listView to show me
                     SwipeMenuCreator creator = new SwipeMenuCreator() {
                                    @Override
                                    public void create(SwipeMenu menu) {
-                                       SwipeMenuItem approve = new SwipeMenuItem(MainActivity.this);
-                                       approve.setWidth(dp2px(80));
-                                       approve.setTitle("Approve");
-                                       approve.setBackground(R.drawable.round_green);
-                                       approve.setIcon(R.drawable.price);
-                                       approve.setTitleColor(android.R.color.white);
-                                       approve.setTitleSize(14);
-                                       approve.setIconTintColor(R.color.white);
-                                       approve.setLayoutBackgroundColor(R.color.ash);
-                                       approve.setMargins(new Margins(5,5,5,5));
-                                       menu.addMenuItem(approve);
+                                          SwipeMenuItem approve = new SwipeMenuItem(MainActivity.this);
+                                                           approve.setWidth(dp2px(80));
+                                                           approve.setTitle("Approve");
+                                                           approve.setBackground(R.drawable.round_green);
+                                                           approve.setIcon(R.drawable.price);
+                                                           approve.setTitleColor(android.R.color.white);
+                                                           approve.setTitleSize(14);
+                                                           approve.setIconTintColor(R.color.white);
+                                                           approve.setLayoutBackgroundColor(R.color.ash);
+                                                           approve.setFontName("GothamRnd-Bold.otf");
+                                                           approve.setImageSize(15,15);
+                                                           menu.addMenuItem(approve);
 
 
-                                       SwipeMenuItem cancel = new SwipeMenuItem(MainActivity.this);
-                                       cancel.setWidth(dp2px(80));
-                                       cancel.setTitle("Cancel");
-                                       cancel.setIcon(R.drawable.search); //tODO use png file
-                                       cancel.setTitleSize(14);
-                                       cancel.setTitleColor(android.R.color.black);
-                                       cancel.setBackground(R.drawable.round_red);
-                                       cancel.setIconTintColor(R.color.white);
-                                       cancel.setLayoutBackgroundColor(R.color.ash);
-                                       cancel.setMargins(new Margins(5,5,5,5));
-                                       menu.addMenuItem(cancel);
+                                                           SwipeMenuItem cancel = new SwipeMenuItem(MainActivity.this);
+                                                           cancel.setWidth(dp2px(80));
+                                                           cancel.setTitle("Cancel");
+                                                           cancel.setIcon(R.drawable.search); //tODO use png file
+                                                           cancel.setTitleSize(14);
+                                                           cancel.setTitleColor(android.R.color.black);
+                                                           cancel.setBackground(R.drawable.round_red);
+                                                           cancel.setIconTintColor(R.color.white);
+                                                           cancel.setLayoutBackgroundColor(R.color.ash);
+                                                           cancel.setMargins(new Margins(5,5,5,5));
+                                                           approve.setFontName("GothamRnd-Bold.otf");
+                                                           approve.setImageSize(15,15);
+                                                           menu.addMenuItem(cancel);
 
                 }
             };

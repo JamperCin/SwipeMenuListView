@@ -51,7 +51,6 @@ public class SwipeMenuView extends LinearLayout implements OnClickListener {
     }
 
 
-
     private void addItem(SwipeMenuItem item, int id) {
         try {
             LayoutParams params = new LayoutParams(item.getWidth(), ViewGroup.LayoutParams.MATCH_PARENT);
@@ -60,11 +59,15 @@ public class SwipeMenuView extends LinearLayout implements OnClickListener {
             assert inflater != null;
 
             RelativeLayout parent = (RelativeLayout) inflater.inflate(R.layout.menu_layout, null);
-            params.setMargins(5, 0, 10, 0);
+
+            Margins margins = item.getMargins();
+            if (margins != null)
+                params.setMargins(margins.getLeft(), margins.getTop(), margins.getRight(), margins.getBottom());
+
             parent.setLayoutParams(params);
 
-            ImageView imageView = (ImageView)parent.findViewById(R.id.ic_icon_s);
-            TextView tv = (TextView)parent.findViewById(R.id.titleText_s);
+            ImageView imageView = (ImageView) parent.findViewById(R.id.ic_icon_s);
+            TextView tv = (TextView) parent.findViewById(R.id.titleText_s);
 
             parent.setId(id);
 

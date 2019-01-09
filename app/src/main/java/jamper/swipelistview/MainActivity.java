@@ -6,6 +6,7 @@ import android.util.TypedValue;
 import android.view.animation.BounceInterpolator;
 import android.widget.ListView;
 
+import com.jamper.swipemenulistview.swipe.Margins;
 import com.jamper.swipemenulistview.swipe.SwipeMenu;
 import com.jamper.swipemenulistview.swipe.SwipeMenuCreator;
 import com.jamper.swipemenulistview.swipe.SwipeMenuItem;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     approve.setTitleSize(14);
                     approve.setIconTintColor(R.color.white);
                     approve.setLayoutBackgroundColor(R.color.ash);
+                    approve.setMargins(new Margins(5,5,5,5));
                     menu.addMenuItem(approve);
 
 
@@ -98,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     cancel.setBackground(R.drawable.round_red);
                     cancel.setIconTintColor(R.color.white);
                     cancel.setLayoutBackgroundColor(R.color.ash);
+                    cancel.setMargins(new Margins(5,5,5,5));
                     menu.addMenuItem(cancel);
 
                 }

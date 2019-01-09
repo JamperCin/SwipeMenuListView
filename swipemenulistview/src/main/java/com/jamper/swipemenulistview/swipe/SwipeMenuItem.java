@@ -22,6 +22,7 @@ public class SwipeMenuItem {
 	private int titleSize;
 	private int width;
 	private int layoutBackgroundColor = 0;
+	private Margins margins;
 
 	public SwipeMenuItem(Context context) {
 		mContext = context;
@@ -117,5 +118,13 @@ public class SwipeMenuItem {
 
 	public void setLayoutBackgroundColor(int layoutBackgroundColor) {
 		this.layoutBackgroundColor = mContext.getResources().getColor(layoutBackgroundColor);
+	}
+
+	public Margins getMargins() {
+		return margins;
+	}
+
+	public void setMargins(Margins margins) {
+		this.margins = margins;
 	}
 }

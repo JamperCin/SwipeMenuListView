@@ -3,7 +3,7 @@ Use this light weight android library to create a customised listView to show me
 
 [![](https://jitpack.io/v/JamperCin/SwipeMenuListView.svg)](https://jitpack.io/#JamperCin/SwipeMenuListView)
 
-![alt text](https://github.com/JamperCin/FloatingMenuDialog/blob/master/sample.png)
+![alt text](https://github.com/JamperCin/SwipeMenuListView/blob/master/sample_ic.png)
 
 **Step 1: Add this to your root build.gradle(Project level) at the end of repositories:**
 
